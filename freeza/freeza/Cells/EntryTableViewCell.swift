@@ -1,10 +1,5 @@
 import UIKit
 
-protocol EntryTableViewCellDelegate {
-    
-    func presentImage(withURL url: URL)
-}
-
 class EntryTableViewCell: UITableViewCell {
 
     static let cellId = "EntryTableViewCell"
@@ -17,8 +12,6 @@ class EntryTableViewCell: UITableViewCell {
         }
     }
     
-    var delegate: EntryTableViewCellDelegate?
-    
     @IBOutlet private weak var thumbnailButton: UIButton!
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var commentsCountLabel: UILabel!
@@ -29,14 +22,6 @@ class EntryTableViewCell: UITableViewCell {
         
         super.layoutSubviews()
         self.configureViews()
-    }
-    
-    @IBAction func thumbnailButtonTapped(_ sender: AnyObject) {
-        
-        if let url = self.entry?.url {
-            
-            self.delegate?.presentImage(withURL: url)
-        }
     }
     
     private func configureViews() {

@@ -142,13 +142,21 @@ extension TopEntriesViewController { // UITableViewDataSource
         let entryTableViewCell = tableView.dequeueReusableCell(withIdentifier: EntryTableViewCell.cellId, for: indexPath as IndexPath) as! EntryTableViewCell
         
         entryTableViewCell.entry = self.viewModel.entries[indexPath.row]
-        entryTableViewCell.delegate = self
+        entryTableViewCell.isUserInteractionEnabled = true
         
         return entryTableViewCell
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let entry = self.viewModel.entries[indexPath.row]
+
+        if let url = entry.url {
+            self.presentImage(withURL: url)
+        }
+    }
 }
 
-extension TopEntriesViewController: EntryTableViewCellDelegate {
+extension TopEntriesViewController {
  
     func presentImage(withURL url: URL) {
         

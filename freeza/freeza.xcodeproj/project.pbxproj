@@ -17,21 +17,12 @@
 		567EFC0A25A7B64D00CF360E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC0925A7B64D00CF360E /* AppDelegate.swift */; };
 		567EFC2825A7B65D00CF360E /* TopEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1025A7B65D00CF360E /* TopEntriesViewController.swift */; };
 		567EFC2925A7B65D00CF360E /* URLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1125A7B65D00CF360E /* URLViewController.swift */; };
-		567EFC2A25A7B65D00CF360E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1225A7B65D00CF360E /* HomeViewController.swift */; };
-		567EFC2B25A7B65D00CF360E /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1325A7B65D00CF360E /* FirstVC.swift */; };
-		567EFC2C25A7B65D00CF360E /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1425A7B65D00CF360E /* ContainerViewController.swift */; };
-		567EFC2D25A7B65D00CF360E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1525A7B65D00CF360E /* MenuViewController.swift */; };
 		567EFC2E25A7B65D00CF360E /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1725A7B65D00CF360E /* RedditClient.swift */; };
 		567EFC2F25A7B65D00CF360E /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1825A7B65D00CF360E /* Client.swift */; };
 		567EFC3025A7B65D00CF360E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1A25A7B65D00CF360E /* UIView.swift */; };
 		567EFC3125A7B65D00CF360E /* NSDate+AgeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1B25A7B65D00CF360E /* NSDate+AgeFormatter.swift */; };
-		567EFC3225A7B65D00CF360E /* protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1C25A7B65D00CF360E /* protocols.swift */; };
 		567EFC3325A7B65D00CF360E /* EntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC1E25A7B65D00CF360E /* EntryModel.swift */; };
-		567EFC3425A7B65D00CF360E /* ImageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567EFC2025A7B65D00CF360E /* ImageHeaderView.xib */; };
 		567EFC3525A7B65D00CF360E /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2125A7B65D00CF360E /* EntryTableViewCell.swift */; };
-		567EFC3625A7B65D00CF360E /* ImageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2225A7B65D00CF360E /* ImageHeaderView.swift */; };
-		567EFC3725A7B65D00CF360E /* menuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2325A7B65D00CF360E /* menuCell.swift */; };
-		567EFC3825A7B65D00CF360E /* menuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567EFC2425A7B65D00CF360E /* menuCell.xib */; };
 		567EFC3925A7B65D00CF360E /* TopEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2625A7B65D00CF360E /* TopEntriesViewModel.swift */; };
 		567EFC3A25A7B65D00CF360E /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2725A7B65D00CF360E /* EntryViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -61,21 +52,12 @@
 		567EFC0925A7B64D00CF360E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		567EFC1025A7B65D00CF360E /* TopEntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopEntriesViewController.swift; sourceTree = "<group>"; };
 		567EFC1125A7B65D00CF360E /* URLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLViewController.swift; sourceTree = "<group>"; };
-		567EFC1225A7B65D00CF360E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		567EFC1325A7B65D00CF360E /* FirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
-		567EFC1425A7B65D00CF360E /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		567EFC1525A7B65D00CF360E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		567EFC1725A7B65D00CF360E /* RedditClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
 		567EFC1825A7B65D00CF360E /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		567EFC1A25A7B65D00CF360E /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		567EFC1B25A7B65D00CF360E /* NSDate+AgeFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+AgeFormatter.swift"; sourceTree = "<group>"; };
-		567EFC1C25A7B65D00CF360E /* protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = protocols.swift; sourceTree = "<group>"; };
 		567EFC1E25A7B65D00CF360E /* EntryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryModel.swift; sourceTree = "<group>"; };
-		567EFC2025A7B65D00CF360E /* ImageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageHeaderView.xib; sourceTree = "<group>"; };
 		567EFC2125A7B65D00CF360E /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
-		567EFC2225A7B65D00CF360E /* ImageHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHeaderView.swift; sourceTree = "<group>"; };
-		567EFC2325A7B65D00CF360E /* menuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuCell.swift; sourceTree = "<group>"; };
-		567EFC2425A7B65D00CF360E /* menuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = menuCell.xib; sourceTree = "<group>"; };
 		567EFC2625A7B65D00CF360E /* TopEntriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopEntriesViewModel.swift; sourceTree = "<group>"; };
 		567EFC2725A7B65D00CF360E /* EntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,10 +173,6 @@
 			children = (
 				567EFC1025A7B65D00CF360E /* TopEntriesViewController.swift */,
 				567EFC1125A7B65D00CF360E /* URLViewController.swift */,
-				567EFC1225A7B65D00CF360E /* HomeViewController.swift */,
-				567EFC1525A7B65D00CF360E /* MenuViewController.swift */,
-				567EFC1425A7B65D00CF360E /* ContainerViewController.swift */,
-				567EFC1325A7B65D00CF360E /* FirstVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,7 +191,6 @@
 			children = (
 				567EFC1A25A7B65D00CF360E /* UIView.swift */,
 				567EFC1B25A7B65D00CF360E /* NSDate+AgeFormatter.swift */,
-				567EFC1C25A7B65D00CF360E /* protocols.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,10 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				567EFC2125A7B65D00CF360E /* EntryTableViewCell.swift */,
-				567EFC2025A7B65D00CF360E /* ImageHeaderView.xib */,
-				567EFC2225A7B65D00CF360E /* ImageHeaderView.swift */,
-				567EFC2325A7B65D00CF360E /* menuCell.swift */,
-				567EFC2425A7B65D00CF360E /* menuCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -333,8 +306,6 @@
 				31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */,
 				31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */,
 				31CAC14C1D0B412600E553AC /* Main.storyboard in Resources */,
-				567EFC3825A7B65D00CF360E /* menuCell.xib in Resources */,
-				567EFC3425A7B65D00CF360E /* ImageHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,20 +326,13 @@
 				567EFC3025A7B65D00CF360E /* UIView.swift in Sources */,
 				567EFC2E25A7B65D00CF360E /* RedditClient.swift in Sources */,
 				567EFC0A25A7B64D00CF360E /* AppDelegate.swift in Sources */,
-				567EFC3625A7B65D00CF360E /* ImageHeaderView.swift in Sources */,
-				567EFC3225A7B65D00CF360E /* protocols.swift in Sources */,
 				567EFC3125A7B65D00CF360E /* NSDate+AgeFormatter.swift in Sources */,
 				567EFC2925A7B65D00CF360E /* URLViewController.swift in Sources */,
 				567EFC2825A7B65D00CF360E /* TopEntriesViewController.swift in Sources */,
-				567EFC2D25A7B65D00CF360E /* MenuViewController.swift in Sources */,
 				567EFC3925A7B65D00CF360E /* TopEntriesViewModel.swift in Sources */,
-				567EFC2B25A7B65D00CF360E /* FirstVC.swift in Sources */,
-				567EFC2C25A7B65D00CF360E /* ContainerViewController.swift in Sources */,
 				567EFC3525A7B65D00CF360E /* EntryTableViewCell.swift in Sources */,
-				567EFC2A25A7B65D00CF360E /* HomeViewController.swift in Sources */,
 				567EFC2F25A7B65D00CF360E /* Client.swift in Sources */,
 				567EFC3A25A7B65D00CF360E /* EntryViewModel.swift in Sources */,
-				567EFC3725A7B65D00CF360E /* menuCell.swift in Sources */,
 				567EFC3325A7B65D00CF360E /* EntryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

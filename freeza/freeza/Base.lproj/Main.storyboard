@@ -4,8 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,9 +97,7 @@
                             <outlet property="delegate" destination="2Fm-PT-q0X" id="gUy-dD-Evp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Top" id="ues-u9-1rD">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="QZD-Ag-HKJ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Top" id="ues-u9-1rD"/>
                     <connections>
                         <segue destination="aCN-S2-Zc5" kind="show" identifier="showImageSegue" id="kwL-93-PBZ"/>
                     </connections>
@@ -164,62 +160,8 @@
             </objects>
             <point key="canvasLocation" x="1716" y="534"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="IPk-fN-6EZ">
-            <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="u7T-9v-pyh" customClass="HomeViewController" customModule="Sidebar_Menu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LEt-Bv-7Y1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="INY-6S-ra6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="H6z-Ns-WdP" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1716" y="1295"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="Rmd-tz-cE0">
-            <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="kyX-LE-0f9" customClass="MenuViewController" customModule="Sidebar_Menu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.89999997615814209" contentMode="scaleToFill" id="KeU-fL-2pW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="658-0f-NJ6">
-                                <rect key="frame" x="0.0" y="200" width="414" height="662"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="kyX-LE-0f9" id="Tcg-DY-OjW"/>
-                                    <outlet property="delegate" destination="kyX-LE-0f9" id="4ei-md-Nsd"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="X9F-Jw-0Mu"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="658-0f-NJ6" firstAttribute="leading" secondItem="X9F-Jw-0Mu" secondAttribute="leading" id="ExB-0F-ujp"/>
-                            <constraint firstItem="X9F-Jw-0Mu" firstAttribute="bottom" secondItem="658-0f-NJ6" secondAttribute="bottom" id="QU9-re-cab"/>
-                            <constraint firstItem="X9F-Jw-0Mu" firstAttribute="trailing" secondItem="658-0f-NJ6" secondAttribute="trailing" id="Qnu-vJ-Y0W"/>
-                            <constraint firstItem="658-0f-NJ6" firstAttribute="top" secondItem="KeU-fL-2pW" secondAttribute="top" constant="200" id="pcb-9O-P3O"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="658-0f-NJ6" id="lDe-h4-Jll"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hSn-dT-ty6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2528" y="1294"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="menu" width="24" height="24"/>
         <image name="thumbnail-placeholder" width="90" height="90"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

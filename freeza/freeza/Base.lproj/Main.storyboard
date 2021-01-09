@@ -24,8 +24,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-mz-4hc">
-                                            <rect key="frame" x="8" y="76" width="584" height="22"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-mz-4hc">
+                                            <rect key="frame" x="20" y="79" width="386" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -119,8 +119,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-7D-cVs">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-7D-cVs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="aCN-S2-Zc5" id="99D-RQ-d6O"/>
@@ -144,11 +144,11 @@
             </objects>
             <point key="canvasLocation" x="3341" y="534"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="Xky-FP-QP7">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DrB-fV-66k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="K36-nx-5Ob"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="K36-nx-5Ob"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oW9-vJ-rsK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ahr-2X-kSx">
@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="1716" y="534"/>
         </scene>
-        <!--Favorites-->
+        <!--View Controller-->
         <scene sceneID="azX-Sf-HDj">
             <objects>
                 <viewController id="Y7j-cZ-T26" sceneMemberID="viewController">
@@ -177,13 +177,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="love" id="OAa-5O-6Pz"/>
+                    <tabBarItem key="tabBarItem" title="" systemItem="recents" id="OAa-5O-6Pz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uYo-L9-J3X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2517" y="1821"/>
+            <point key="canvasLocation" x="2516" y="1880"/>
         </scene>
-        <!--Home-->
+        <!--Favorites-->
         <scene sceneID="mXy-aY-EAy">
             <objects>
                 <viewController id="zif-PD-l6f" sceneMemberID="viewController">
@@ -196,7 +196,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="home" id="5im-7k-SDG"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="love" id="5im-7k-SDG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4e-c2-JuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -214,9 +214,9 @@
                         <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="zif-PD-l6f" kind="relationship" relationship="viewControllers" id="APD-Sz-Wzc"/>
-                        <segue destination="Y7j-cZ-T26" kind="relationship" relationship="viewControllers" id="p7s-kg-RY1"/>
                         <segue destination="DrB-fV-66k" kind="relationship" relationship="viewControllers" id="atf-M5-LeH"/>
+                        <segue destination="zif-PD-l6f" kind="relationship" relationship="viewControllers" id="FTf-FE-U1J"/>
+                        <segue destination="Y7j-cZ-T26" kind="relationship" relationship="viewControllers" id="rmS-nc-0uW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQW-7L-DRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

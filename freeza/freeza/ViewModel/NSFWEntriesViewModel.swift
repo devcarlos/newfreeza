@@ -1,6 +1,6 @@
 import Foundation
 
-class TopEntriesViewModel {
+class NSFWEntriesViewModel {
     var hasError = false
     var errorMessage: String?
     var entries = [EntryViewModel]()
@@ -13,12 +13,13 @@ class TopEntriesViewModel {
     }
 
     func loadEntries(withCompletion completionHandler: @escaping () -> ()) {
-        self.client.fetchTop(after: self.afterTag, completionHandler: { [weak self] responseDictionary in
+        self.client.fetchNSFW(after: self.afterTag, completionHandler: { [weak self]
+            responseDictionary in
 
             guard let strongSelf = self else {
                 return
             }
-
+            
             guard let data = responseDictionary["data"] as? [String: AnyObject],
                 let children = data["children"] as? [[String: AnyObject]] else {
                 strongSelf.hasError = true

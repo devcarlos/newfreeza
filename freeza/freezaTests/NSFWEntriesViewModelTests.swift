@@ -1,18 +1,18 @@
 import XCTest
 @testable import freeza
 
-class TopEntriesViewModelTests: XCTestCase {
+class NSFWEntriesViewModelTests: XCTestCase {
 
     func testCompletion() {
         
         let client = RedditClient()
-        let topEntriesViewModel = TopEntriesViewModel(withClient: client)
+        let topEntriesViewModel = NSFWEntriesViewModel(withClient: client)
         
         let waitExpectation = expectation(description: "Wait for loadEntries to complete.")
         
         topEntriesViewModel.loadEntries {
             
-            XCTAssertEqual(topEntriesViewModel.entries.count, 50)
+            XCTAssertEqual(topEntriesViewModel.entries.count, 200)
             XCTAssertFalse(topEntriesViewModel.hasError)
             
             topEntriesViewModel.entries.forEach { entryViewModel in
@@ -29,7 +29,7 @@ class TopEntriesViewModelTests: XCTestCase {
     func testError() {
         
         let client = TestErrorClient()
-        let topEntriesViewModel = TopEntriesViewModel(withClient: client)
+        let topEntriesViewModel = NSFWEntriesViewModel(withClient: client)
         
         let waitExpectation = expectation(description: "Wait for loadEntries to complete.")
         
@@ -41,19 +41,5 @@ class TopEntriesViewModelTests: XCTestCase {
         }
         
         waitForExpectations(timeout: 60, handler: nil)
-    }
-}
-
-class TestErrorClient: Client {
-    static let testErrorMessage = "TEST_ERROR"
-
-    func fetchNSFW(after afterTag: String?, completionHandler: @escaping ([String : AnyObject]) -> (), errorHandler: @escaping (String) -> ()) {
-
-        errorHandler(TestErrorClient.testErrorMessage)
-    }
-
-    func fetchTop(after afterTag: String?, completionHandler: @escaping ([String : AnyObject]) -> (), errorHandler: @escaping (String) -> ()) {
-        
-        errorHandler(TestErrorClient.testErrorMessage)
     }
 }

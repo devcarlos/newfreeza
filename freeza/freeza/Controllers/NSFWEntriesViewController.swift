@@ -1,8 +1,8 @@
 import Foundation
 import UIKit
 
-class TopEntriesViewController: UITableViewController {
-    let viewModel = TopEntriesViewModel(withClient: RedditClient())
+class NSFWEntriesViewController: UITableViewController {
+    let viewModel = NSFWEntriesViewModel(withClient: RedditClient())
     let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let errorLabel = UILabel()
     let tableFooterView = UIView()
@@ -61,7 +61,7 @@ class TopEntriesViewController: UITableViewController {
             self.moreButton.setTitle("More...", for: [])
             self.moreButton.setTitle("Loading...", for: .disabled)
             self.moreButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-            self.moreButton.addTarget(self, action: #selector(TopEntriesViewController.moreButtonTapped), for: .touchUpInside)
+            self.moreButton.addTarget(self, action: #selector(NSFWEntriesViewController.moreButtonTapped), for: .touchUpInside)
         }
 
         func configureToolbar() {
@@ -69,9 +69,9 @@ class TopEntriesViewController: UITableViewController {
 
             let errorItem = UIBarButtonItem(customView: self.errorLabel)
             let flexSpaceItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            let retryItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(TopEntriesViewController.retryFromErrorToolbar))
+            let retryItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(NSFWEntriesViewController.retryFromErrorToolbar))
             let fixedSpaceItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-            let closeItem = UIBarButtonItem(image: UIImage(named: "close-button"), style: .plain, target: self, action: #selector(TopEntriesViewController.dismissErrorToolbar))
+            let closeItem = UIBarButtonItem(image: UIImage(named: "close-button"), style: .plain, target: self, action: #selector(NSFWEntriesViewController.dismissErrorToolbar))
 
             fixedSpaceItem.width = 12
 
@@ -101,7 +101,7 @@ class TopEntriesViewController: UITableViewController {
     }
 }
 
-extension TopEntriesViewController { // UITableViewDataSource
+extension NSFWEntriesViewController { // UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.viewModel.entries.count
     }
@@ -131,10 +131,9 @@ extension TopEntriesViewController { // UITableViewDataSource
     }
 }
 
-extension TopEntriesViewController {
+extension NSFWEntriesViewController {
     func presentImage(withURL url: URL) {
         self.urlToDisplay = url
-
         guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "URLViewController") as? URLViewController else {
             return
         }

@@ -6,16 +6,16 @@ class NSFWEntriesViewModelTests: XCTestCase {
     func testCompletion() {
         
         let client = RedditClient()
-        let topEntriesViewModel = NSFWEntriesViewModel(withClient: client)
+        let nsfwEntriesViewModel = NSFWEntriesViewModel(withClient: client)
         
         let waitExpectation = expectation(description: "Wait for loadEntries to complete.")
         
-        topEntriesViewModel.loadEntries {
+        nsfwEntriesViewModel.loadEntries {
             
-            XCTAssertEqual(topEntriesViewModel.entries.count, 200)
-            XCTAssertFalse(topEntriesViewModel.hasError)
+            XCTAssertEqual(nsfwEntriesViewModel.entries.count, 51)
+            XCTAssertFalse(nsfwEntriesViewModel.hasError)
             
-            topEntriesViewModel.entries.forEach { entryViewModel in
+            nsfwEntriesViewModel.entries.forEach { entryViewModel in
                 
                 XCTAssertFalse(entryViewModel.hasError)
             }

@@ -85,9 +85,9 @@ extension EntryTableViewCell  {
         
         if entry.over18 {
             if #available(iOS 10.0, *) {
-                self.thumbnailButton.shakev1()
+                self.contentView.shakev1()
             } else {
-                self.thumbnailButton.shakev2()
+                self.contentView.shakev2()
             }
         }
     }

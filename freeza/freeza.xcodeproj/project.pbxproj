@@ -14,6 +14,11 @@
 		31CAC14C1D0B412600E553AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14A1D0B412600E553AC /* Main.storyboard */; };
 		31CAC14E1D0B412600E553AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14D1D0B412600E553AC /* Assets.xcassets */; };
 		31CAC1511D0B412600E553AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */; };
+		3E9E7CC09B327E924947C00A /* Pods_freeza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F85AB25F212C78ABD4C4A55 /* Pods_freeza.framework */; };
+		566C27FE25AD448D00FF5E30 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C27FD25AD448D00FF5E30 /* Persistence.swift */; };
+		566C280825AD47EB00FF5E30 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C280725AD47EB00FF5E30 /* PersistenceTests.swift */; };
+		566C283C25AD683700FF5E30 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C283B25AD683700FF5E30 /* FavoritesViewController.swift */; };
+		566C284225AD68AF00FF5E30 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566C284125AD68AF00FF5E30 /* FavoritesViewModel.swift */; };
 		567E027525AA9E8500CF360E /* NSFWEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E027425AA9E8400CF360E /* NSFWEntriesViewModel.swift */; };
 		567E027925AA9F3C00CF360E /* NSFWEntriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E027825AA9F3C00CF360E /* NSFWEntriesViewModelTests.swift */; };
 		567E027F25AAA02D00CF360E /* NSFWEntriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567E027E25AAA02D00CF360E /* NSFWEntriesViewController.swift */; };
@@ -28,6 +33,8 @@
 		567EFC3525A7B65D00CF360E /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2125A7B65D00CF360E /* EntryTableViewCell.swift */; };
 		567EFC3925A7B65D00CF360E /* TopEntriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2625A7B65D00CF360E /* TopEntriesViewModel.swift */; };
 		567EFC3A25A7B65D00CF360E /* EntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567EFC2725A7B65D00CF360E /* EntryViewModel.swift */; };
+		56B7254625AD419F003A23C5 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B7254525AD419F003A23C5 /* Favorite.swift */; };
+		889B80A7FE8075A840CA4CBF /* Pods_freezaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23E01FE8736572F2AA7372E /* Pods_freezaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D2D4A4A6BE9EB15CABC5CBB /* Pods-freezaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.debug.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		31AA46DE1D0B43A0006C42BA /* RedditEntryModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditEntryModelTest.swift; sourceTree = "<group>"; };
 		31AA46E01D0B4D2C006C42BA /* ReditClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReditClientTests.swift; sourceTree = "<group>"; };
 		31AA46ED1D0B97EE006C42BA /* NSDate+AgeFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+AgeFormatterTests.swift"; sourceTree = "<group>"; };
@@ -52,6 +60,12 @@
 		31CAC1521D0B412600E553AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31CAC1571D0B412600E553AC /* freezaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freezaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31CAC15D1D0B412600E553AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		380615784C9E115C698B4A08 /* Pods-freeza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.debug.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.debug.xcconfig"; sourceTree = "<group>"; };
+		540ABF623CABD3CD31D24553 /* Pods-freeza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeza.release.xcconfig"; path = "Target Support Files/Pods-freeza/Pods-freeza.release.xcconfig"; sourceTree = "<group>"; };
+		566C27FD25AD448D00FF5E30 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		566C280725AD47EB00FF5E30 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		566C283B25AD683700FF5E30 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		566C284125AD68AF00FF5E30 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		567E027425AA9E8400CF360E /* NSFWEntriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFWEntriesViewModel.swift; sourceTree = "<group>"; };
 		567E027825AA9F3C00CF360E /* NSFWEntriesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFWEntriesViewModelTests.swift; sourceTree = "<group>"; };
 		567E027E25AAA02D00CF360E /* NSFWEntriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSFWEntriesViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +80,10 @@
 		567EFC2125A7B65D00CF360E /* EntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
 		567EFC2625A7B65D00CF360E /* TopEntriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopEntriesViewModel.swift; sourceTree = "<group>"; };
 		567EFC2725A7B65D00CF360E /* EntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewModel.swift; sourceTree = "<group>"; };
+		56B7254525AD419F003A23C5 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		6F85AB25F212C78ABD4C4A55 /* Pods_freeza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF75DA7A4CF7CE0B36F903DD /* Pods-freezaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freezaTests.release.xcconfig"; path = "Target Support Files/Pods-freezaTests/Pods-freezaTests.release.xcconfig"; sourceTree = "<group>"; };
+		E23E01FE8736572F2AA7372E /* Pods_freezaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freezaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9E7CC09B327E924947C00A /* Pods_freeza.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +99,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889B80A7FE8075A840CA4CBF /* Pods_freezaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18E918C0AF8E5438ADB363FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				380615784C9E115C698B4A08 /* Pods-freeza.debug.xcconfig */,
+				540ABF623CABD3CD31D24553 /* Pods-freeza.release.xcconfig */,
+				0D2D4A4A6BE9EB15CABC5CBB /* Pods-freezaTests.debug.xcconfig */,
+				CF75DA7A4CF7CE0B36F903DD /* Pods-freezaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		31AA46DD1D0B438C006C42BA /* Connectivity */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +148,8 @@
 		31AA46FC1D0C5480006C42BA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */,
+				31CAC14A1D0B412600E553AC /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -127,6 +160,8 @@
 				31CAC1451D0B412600E553AC /* freeza */,
 				31CAC15A1D0B412600E553AC /* freezaTests */,
 				31CAC1441D0B412600E553AC /* Products */,
+				18E918C0AF8E5438ADB363FF /* Pods */,
+				634E739FB238253E75CE8FD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,11 +177,9 @@
 		31CAC1451D0B412600E553AC /* freeza */ = {
 			isa = PBXGroup;
 			children = (
+				566C27FC25AD448100FF5E30 /* Persistence */,
 				567EFC0825A7B64D00CF360E /* Application */,
-				567EFC0925A7B64D00CF360E /* AppDelegate.swift */,
 				31AA46FC1D0C5480006C42BA /* Storyboards */,
-				31CAC14F1D0B412600E553AC /* LaunchScreen.storyboard */,
-				31CAC14A1D0B412600E553AC /* Main.storyboard */,
 				31AA46FB1D0C5470006C42BA /* Support */,
 				567EFC1F25A7B65D00CF360E /* Cells */,
 				567EFC1625A7B65D00CF360E /* Client */,
@@ -161,6 +194,7 @@
 		31CAC15A1D0B412600E553AC /* freezaTests */ = {
 			isa = PBXGroup;
 			children = (
+				566C280625AD47D900FF5E30 /* Database */,
 				31AA46DD1D0B438C006C42BA /* Connectivity */,
 				31AA46EA1D0B9783006C42BA /* ViewModels */,
 				31CAC15D1D0B412600E553AC /* Info.plist */,
@@ -168,9 +202,26 @@
 			path = freezaTests;
 			sourceTree = "<group>";
 		};
+		566C27FC25AD448100FF5E30 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				566C27FD25AD448D00FF5E30 /* Persistence.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		566C280625AD47D900FF5E30 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				566C280725AD47EB00FF5E30 /* PersistenceTests.swift */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		567EFC0825A7B64D00CF360E /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				567EFC0925A7B64D00CF360E /* AppDelegate.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -180,6 +231,7 @@
 			children = (
 				567EFC1025A7B65D00CF360E /* TopEntriesViewController.swift */,
 				567E027E25AAA02D00CF360E /* NSFWEntriesViewController.swift */,
+				566C283B25AD683700FF5E30 /* FavoritesViewController.swift */,
 				567EFC1125A7B65D00CF360E /* URLViewController.swift */,
 			);
 			path = Controllers;
@@ -207,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				567EFC1E25A7B65D00CF360E /* EntryModel.swift */,
+				56B7254525AD419F003A23C5 /* Favorite.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,9 +277,19 @@
 			children = (
 				567EFC2625A7B65D00CF360E /* TopEntriesViewModel.swift */,
 				567E027425AA9E8400CF360E /* NSFWEntriesViewModel.swift */,
+				566C284125AD68AF00FF5E30 /* FavoritesViewModel.swift */,
 				567EFC2725A7B65D00CF360E /* EntryViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		634E739FB238253E75CE8FD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F85AB25F212C78ABD4C4A55 /* Pods_freeza.framework */,
+				E23E01FE8736572F2AA7372E /* Pods_freezaTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,9 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1601D0B412600E553AC /* Build configuration list for PBXNativeTarget "freeza" */;
 			buildPhases = (
+				A923990C20B83222F258E88A /* [CP] Check Pods Manifest.lock */,
 				31CAC13F1D0B412600E553AC /* Sources */,
 				31CAC1401D0B412600E553AC /* Frameworks */,
 				31CAC1411D0B412600E553AC /* Resources */,
+				74532E17066EBD519040B04D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31CAC1631D0B412600E553AC /* Build configuration list for PBXNativeTarget "freezaTests" */;
 			buildPhases = (
+				388F882CD79FC1A019042B63 /* [CP] Check Pods Manifest.lock */,
 				31CAC1531D0B412600E553AC /* Sources */,
 				31CAC1541D0B412600E553AC /* Frameworks */,
 				31CAC1551D0B412600E553AC /* Resources */,
+				0A67A6B4E156B638CE59E411 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,15 +393,106 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A67A6B4E156B638CE59E411 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-freezaTests/Pods-freezaTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-freezaTests/Pods-freezaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		388F882CD79FC1A019042B63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freezaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74532E17066EBD519040B04D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-freeza/Pods-freeza-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A923990C20B83222F258E88A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-freeza-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31CAC13F1D0B412600E553AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				567EFC3025A7B65D00CF360E /* UIView.swift in Sources */,
+				56B7254625AD419F003A23C5 /* Favorite.swift in Sources */,
+				566C283C25AD683700FF5E30 /* FavoritesViewController.swift in Sources */,
 				567EFC2E25A7B65D00CF360E /* RedditClient.swift in Sources */,
+				566C27FE25AD448D00FF5E30 /* Persistence.swift in Sources */,
 				567EFC0A25A7B64D00CF360E /* AppDelegate.swift in Sources */,
 				567EFC3125A7B65D00CF360E /* NSDate+AgeFormatter.swift in Sources */,
+				566C284225AD68AF00FF5E30 /* FavoritesViewModel.swift in Sources */,
 				567EFC2925A7B65D00CF360E /* URLViewController.swift in Sources */,
 				567E027525AA9E8500CF360E /* NSFWEntriesViewModel.swift in Sources */,
 				567EFC2825A7B65D00CF360E /* TopEntriesViewController.swift in Sources */,
@@ -351,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				566C280825AD47EB00FF5E30 /* PersistenceTests.swift in Sources */,
 				31AA46DF1D0B43A0006C42BA /* RedditEntryModelTest.swift in Sources */,
 				31AA46F41D0C3F9E006C42BA /* TopEntriesViewModelTests.swift in Sources */,
 				31AA46EE1D0B97EE006C42BA /* NSDate+AgeFormatterTests.swift in Sources */,
@@ -497,6 +656,7 @@
 		};
 		31CAC1611D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380615784C9E115C698B4A08 /* Pods-freeza.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -510,6 +670,7 @@
 		};
 		31CAC1621D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540ABF623CABD3CD31D24553 /* Pods-freeza.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = freeza/Info.plist;
@@ -523,6 +684,7 @@
 		};
 		31CAC1641D0B412600E553AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D2D4A4A6BE9EB15CABC5CBB /* Pods-freezaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +699,7 @@
 		};
 		31CAC1651D0B412600E553AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF75DA7A4CF7CE0B36F903DD /* Pods-freezaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

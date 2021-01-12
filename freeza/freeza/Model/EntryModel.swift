@@ -9,6 +9,16 @@ struct EntryModel {
     let over18: Bool?
     let url: URL?
 
+    init(object: Favorite) {
+        self.title = object.title
+        self.author = object.author
+        self.creation = object.creation
+        self.thumbnailURL = URL(string: object.thumbnailURL ?? "")
+        self.commentsCount = object.commentsCount
+        self.over18 = object.over18
+        self.url = URL(string: object.url ?? "")
+    }
+
     init(withDictionary dictionary: [String: AnyObject]) {
         func dateFromDictionary(withAttributeName attribute: String) -> Date? {
             guard let rawDate = dictionary[attribute] as? Double else {
@@ -34,4 +44,26 @@ struct EntryModel {
         self.over18 = dictionary["over_18"] as? Bool
         self.url = urlFromDictionary(withAttributeName: "url")
     }
+}
+
+// MARK: - Seed Data
+extension EntryModel {
+    static let entry1: EntryModel = EntryModel(withDictionary: [
+        "title": "Big Little Lies" as AnyObject,
+        "author": "Carlos Alcala" as AnyObject,
+        "created_utc": NSDate().timeIntervalSince1970 as AnyObject,
+        "num_comments": 100 as AnyObject
+    ])
+    static let entry2: EntryModel = EntryModel(withDictionary: [
+        "title": "South and West" as AnyObject,
+        "author": "Carlos Alcala" as AnyObject,
+        "created_utc": NSDate().timeIntervalSince1970 as AnyObject,
+        "num_comments": 200 as AnyObject
+    ])
+    static let entry3: EntryModel = EntryModel(withDictionary: [
+        "title": "Testing Entry" as AnyObject,
+        "author": "Carlos Alcala" as AnyObject,
+        "created_utc": NSDate().timeIntervalSince1970 as AnyObject,
+        "num_comments": 300 as AnyObject
+    ])
 }

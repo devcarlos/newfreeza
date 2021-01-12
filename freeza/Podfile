@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'freeza' do
+  use_frameworks!
+  pod 'RealmSwift'
+end
+
+target 'freezaTests' do
+  use_frameworks!
+  pod 'RealmSwift'
+end

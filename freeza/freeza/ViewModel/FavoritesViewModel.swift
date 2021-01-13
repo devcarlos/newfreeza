@@ -3,7 +3,7 @@ import Foundation
 class FavoritesViewModel {
     var hasError = false
     var errorMessage: String?
-    var entries = [EntryViewModel]()
+    var entries:[EntryViewModel] = []
 
     private var afterTag: String?
 
@@ -12,14 +12,6 @@ class FavoritesViewModel {
 
     func loadEntries(withCompletion completionHandler: @escaping () -> ()) {
         self.afterTag = ""
-
-        //mock data for testing favorites
-        let favorite1 = Favorite(entry: EntryModel.entry1)
-        let favorite2 = Favorite(entry: EntryModel.entry2)
-        let favorite3 = Favorite(entry: EntryModel.entry3)
-        Persistence.shared.createOrUpdate(object: favorite1)
-        Persistence.shared.createOrUpdate(object: favorite2)
-        Persistence.shared.createOrUpdate(object: favorite3)
 
         let favorites = Persistence.shared.fetch(with: nil, sortDescriptors: [])
 
@@ -31,7 +23,7 @@ class FavoritesViewModel {
             return entryViewModel
         }
 
-        self.entries.append(contentsOf: newEntries)
+        self.entries = Array(newEntries)
 
         self.hasError = false
         self.errorMessage = nil

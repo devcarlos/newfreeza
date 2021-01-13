@@ -7,7 +7,6 @@ class FavoritesViewController: UITableViewController {
     let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let errorLabel = UILabel()
     let tableFooterView = UIView()
-    let moreButton = UIButton(type: .system)
     var urlToDisplay: URL?
 
     override func viewDidLoad() {
@@ -15,8 +14,12 @@ class FavoritesViewController: UITableViewController {
 
         self.configureViews()
         self.loadEntries()
+    }
 
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.loadEntries()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -36,11 +39,6 @@ class FavoritesViewController: UITableViewController {
         self.navigationController?.setToolbarHidden(true, animated: true)
     }
 
-    @objc func moreButtonTapped() {
-        self.moreButton.isEnabled = false
-        self.loadEntries()
-    }
-
     private func loadEntries() {
         self.activityIndicatorView.startAnimating()
         self.viewModel.loadEntries {
@@ -56,15 +54,6 @@ class FavoritesViewController: UITableViewController {
         func configureTableView() {
             self.tableView.rowHeight = UITableViewAutomaticDimension
             self.tableView.estimatedRowHeight = 110.0
-
-            self.tableFooterView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 80)
-            self.tableFooterView.addSubview(self.moreButton)
-
-            self.moreButton.frame = self.tableFooterView.bounds
-            self.moreButton.setTitle("More...", for: [])
-            self.moreButton.setTitle("Loading...", for: .disabled)
-            self.moreButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
-            self.moreButton.addTarget(self, action: #selector(FavoritesViewController.moreButtonTapped), for: .touchUpInside)
         }
 
         func configureToolbar() {
@@ -95,7 +84,6 @@ class FavoritesViewController: UITableViewController {
         self.tableView.reloadData()
 
         self.tableView.tableFooterView = self.tableFooterView
-        self.moreButton.isEnabled = true
 
         if self.viewModel.hasError {
             self.errorLabel.text = self.viewModel.errorMessage
@@ -114,6 +102,7 @@ extension FavoritesViewController { // UITableViewDataSource
 
         entryTableViewCell.entry = self.viewModel.entries[indexPath.row]
         entryTableViewCell.isUserInteractionEnabled = true
+        entryTableViewCell.delegate = self
 
         return entryTableViewCell
     }
@@ -143,5 +132,11 @@ extension FavoritesViewController {
         }
         vc.url = self.urlToDisplay
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension FavoritesViewController: EntryTableViewCellProtocol {
+    func didUpdateFavorites() {
+        self.loadEntries()
     }
 }

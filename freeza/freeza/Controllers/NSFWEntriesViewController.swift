@@ -16,6 +16,12 @@ class NSFWEntriesViewController: UITableViewController {
         self.loadEntries()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.loadEntries()
+    }
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         coordinator.animate(alongsideTransition: { [weak self] _ in
 

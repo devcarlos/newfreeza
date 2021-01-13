@@ -65,6 +65,15 @@
                                             </constraints>
                                             <state key="normal" image="thumbnail-placeholder"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v88-vW-JkL" userLabel="Favorite">
+                                            <rect key="frame" x="346" y="72" width="53" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="9gq-VD-LNY"/>
+                                                <constraint firstAttribute="height" constant="38" id="N5X-dg-NIS"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="heart"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="qNH-q5-Qjw" firstAttribute="centerY" secondItem="LXD-aI-wb0" secondAttribute="centerY" id="3W5-kr-BTM"/>
@@ -76,7 +85,9 @@
                                         <constraint firstItem="ZK0-mz-4hc" firstAttribute="leading" secondItem="4kO-7S-4fe" secondAttribute="leading" id="UQR-D9-6WJ"/>
                                         <constraint firstItem="4kO-7S-4fe" firstAttribute="leading" secondItem="qYg-we-90s" secondAttribute="leadingMargin" id="Xfj-aJ-TmR"/>
                                         <constraint firstItem="LXD-aI-wb0" firstAttribute="leading" secondItem="4kO-7S-4fe" secondAttribute="trailing" constant="8" id="arv-Hg-qLE"/>
+                                        <constraint firstAttribute="trailing" secondItem="v88-vW-JkL" secondAttribute="trailing" constant="15" id="ifb-v5-9Tk"/>
                                         <constraint firstItem="LXD-aI-wb0" firstAttribute="top" secondItem="4kO-7S-4fe" secondAttribute="top" id="lhI-Yc-1tN"/>
+                                        <constraint firstAttribute="bottom" secondItem="v88-vW-JkL" secondAttribute="bottom" id="mLo-RY-m7r"/>
                                         <constraint firstItem="qNH-q5-Qjw" firstAttribute="leading" secondItem="LXD-aI-wb0" secondAttribute="trailing" constant="4" id="n6N-gM-wRl"/>
                                         <constraint firstItem="qNH-q5-Qjw" firstAttribute="trailing" secondItem="qYg-we-90s" secondAttribute="trailingMargin" id="p6l-01-fMF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="yrj-32-1Xg" secondAttribute="trailing" id="pyC-aE-jjO"/>
@@ -88,6 +99,7 @@
                                     <outlet property="authorLabel" destination="LXD-aI-wb0" id="R89-pb-zz9"/>
                                     <outlet property="commentsCountLabel" destination="qNH-q5-Qjw" id="7W9-dc-7qU"/>
                                     <outlet property="entryTitleLabel" destination="ZK0-mz-4hc" id="7dr-ch-tUe"/>
+                                    <outlet property="favoriteButton" destination="v88-vW-JkL" id="PIt-sy-kAZ"/>
                                     <outlet property="thumbnailButton" destination="4kO-7S-4fe" id="IPC-Fg-CXE"/>
                                 </connections>
                             </tableViewCell>
@@ -101,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-4T-dLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-384" y="2080"/>
+            <point key="canvasLocation" x="-384.05797101449281" y="2079.9107142857142"/>
         </scene>
         <!--URL View Controller-->
         <scene sceneID="IJ4-nv-52n">
@@ -173,7 +185,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="DrB-fV-66k" kind="relationship" relationship="viewControllers" id="atf-M5-LeH"/>
-                        <segue destination="OnH-4m-A8M" kind="relationship" relationship="viewControllers" id="cNW-DC-h0e"/>
                         <segue destination="XHf-ur-OVf" kind="relationship" relationship="viewControllers" id="JYb-HX-1N9"/>
                     </connections>
                 </tabBarController>
@@ -239,8 +250,18 @@
                                             </constraints>
                                             <state key="normal" image="thumbnail-placeholder"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vd-Rx-kvi" userLabel="Favorite">
+                                            <rect key="frame" x="346" y="72" width="53" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="AT5-pa-AlD"/>
+                                                <constraint firstAttribute="height" constant="38" id="iEm-aT-HfE"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="heart"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="4vd-Rx-kvi" secondAttribute="bottom" id="9cZ-Xg-sbB"/>
                                         <constraint firstItem="Awe-ZT-aOc" firstAttribute="top" secondItem="JJa-l2-EbD" secondAttribute="bottom" constant="8" id="Lrw-TU-3Py"/>
                                         <constraint firstAttribute="bottom" secondItem="Awe-ZT-aOc" secondAttribute="bottom" constant="11" id="OOw-3u-whN"/>
                                         <constraint firstItem="qAC-hT-Lbh" firstAttribute="leading" secondItem="0Vq-hN-uFa" secondAttribute="leading" id="RK2-eR-HBJ"/>
@@ -252,6 +273,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Awe-ZT-aOc" secondAttribute="trailing" constant="8" id="ohH-4F-Cju"/>
                                         <constraint firstItem="0Vq-hN-uFa" firstAttribute="leading" secondItem="JJa-l2-EbD" secondAttribute="trailing" constant="8" id="ryu-Ma-nws"/>
                                         <constraint firstItem="1hY-qh-XY9" firstAttribute="trailing" secondItem="GrP-1o-Lvc" secondAttribute="trailingMargin" id="v8s-9q-Gbi"/>
+                                        <constraint firstAttribute="trailing" secondItem="4vd-Rx-kvi" secondAttribute="trailing" constant="15" id="vxg-Zz-gVH"/>
                                         <constraint firstItem="JJa-l2-EbD" firstAttribute="top" secondItem="GrP-1o-Lvc" secondAttribute="topMargin" id="wBw-qc-0v8"/>
                                         <constraint firstItem="JJa-l2-EbD" firstAttribute="leading" secondItem="GrP-1o-Lvc" secondAttribute="leadingMargin" id="wFH-uG-e5x"/>
                                         <constraint firstItem="1hY-qh-XY9" firstAttribute="leading" secondItem="0Vq-hN-uFa" secondAttribute="trailing" constant="4" id="wQe-Fx-wyJ"/>
@@ -262,6 +284,7 @@
                                     <outlet property="authorLabel" destination="0Vq-hN-uFa" id="8PK-Pb-kCq"/>
                                     <outlet property="commentsCountLabel" destination="1hY-qh-XY9" id="ufZ-UC-Xoe"/>
                                     <outlet property="entryTitleLabel" destination="Awe-ZT-aOc" id="s6k-M2-mzk"/>
+                                    <outlet property="favoriteButton" destination="4vd-Rx-kvi" id="M69-cD-fGG"/>
                                     <outlet property="thumbnailButton" destination="JJa-l2-EbD" id="Upy-5l-o3e"/>
                                 </connections>
                             </tableViewCell>
@@ -355,11 +378,22 @@
                                             </constraints>
                                             <state key="normal" image="thumbnail-placeholder"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqW-Ly-Qxn" userLabel="Favorite">
+                                            <rect key="frame" x="346" y="72" width="53" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="53" id="cfs-NU-dUJ"/>
+                                                <constraint firstAttribute="height" constant="38" id="xXS-Zo-zPi"/>
+                                            </constraints>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="heart"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="HqW-Ly-Qxn" secondAttribute="trailing" constant="15" id="4dV-np-zIs"/>
                                         <constraint firstItem="uUj-gJ-Ifo" firstAttribute="centerY" secondItem="fHg-LC-AMo" secondAttribute="centerY" id="6eP-7m-JhO"/>
                                         <constraint firstItem="Gdl-ZN-5mn" firstAttribute="top" secondItem="3Gl-le-NKP" secondAttribute="topMargin" id="Ost-Ue-mWm"/>
                                         <constraint firstItem="ykG-Iq-EEr" firstAttribute="leading" secondItem="fHg-LC-AMo" secondAttribute="leading" id="UB6-lE-DOr"/>
+                                        <constraint firstAttribute="bottom" secondItem="HqW-Ly-Qxn" secondAttribute="bottom" id="Wox-eL-BHF"/>
                                         <constraint firstAttribute="bottom" secondItem="LEb-ex-TGH" secondAttribute="bottom" constant="11" id="YcC-iJ-ei6"/>
                                         <constraint firstItem="LEb-ex-TGH" firstAttribute="top" secondItem="Gdl-ZN-5mn" secondAttribute="bottom" constant="8" id="e4q-zI-MZo"/>
                                         <constraint firstItem="LEb-ex-TGH" firstAttribute="leading" secondItem="Gdl-ZN-5mn" secondAttribute="leading" id="eJl-Ps-PtC"/>
@@ -378,6 +412,7 @@
                                     <outlet property="authorLabel" destination="fHg-LC-AMo" id="LAo-Re-SzO"/>
                                     <outlet property="commentsCountLabel" destination="uUj-gJ-Ifo" id="oid-uF-CkO"/>
                                     <outlet property="entryTitleLabel" destination="LEb-ex-TGH" id="RZc-Jr-sdg"/>
+                                    <outlet property="favoriteButton" destination="HqW-Ly-Qxn" id="V0k-qi-mip"/>
                                     <outlet property="thumbnailButton" destination="Gdl-ZN-5mn" id="37l-MD-jAd"/>
                                 </connections>
                             </tableViewCell>
@@ -397,7 +432,7 @@
         <scene sceneID="4Tv-oP-CjP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XHf-ur-OVf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" catalog="system" id="0ZU-Oa-8QH"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heart" id="0ZU-Oa-8QH"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Lcp-M0-HYW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LPw-A4-fnY">
@@ -416,7 +451,7 @@
     </scenes>
     <resources>
         <image name="bell" width="30" height="30"/>
-        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="thumbnail-placeholder" width="90" height="90"/>
     </resources>

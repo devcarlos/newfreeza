@@ -25,9 +25,6 @@ class PersistenceTests: XCTestCase {
 
         //start with clean DB
         persistence.deleteAll()
-
-        //check DB file
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 
     override func tearDown() {

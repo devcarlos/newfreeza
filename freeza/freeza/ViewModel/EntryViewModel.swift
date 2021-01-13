@@ -18,6 +18,8 @@ class EntryViewModel {
         return creation.age()
     }
 
+    var model: EntryModel
+
     var thumbnail: UIImage
     let commentsCount: String
     let url: URL?
@@ -32,6 +34,7 @@ class EntryViewModel {
             self.errorMessage = "Missing required field"
         }
 
+        self.model = model
         self.title = model.title ?? "Untitled"
         self.author = model.author ?? "Anonymous"
         self.thumbnailURL = model.thumbnailURL

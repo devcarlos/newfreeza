@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import RealmSwift
 
 class TopEntriesViewController: UITableViewController {
     let viewModel = TopEntriesViewModel(withClient: RedditClient())
@@ -13,6 +14,14 @@ class TopEntriesViewController: UITableViewController {
         super.viewDidLoad()
 
         self.configureViews()
+        self.loadEntries()
+
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         self.loadEntries()
     }
 

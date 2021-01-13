@@ -3,12 +3,23 @@ import UIKit
 import RealmSwift
 
 class TopEntriesViewController: UITableViewController {
+
+    @IBOutlet weak var safeButton: UIBarButtonItem!
+
     let viewModel = TopEntriesViewModel(withClient: RedditClient())
     let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let errorLabel = UILabel()
     let tableFooterView = UIView()
     let moreButton = UIButton(type: .system)
     var urlToDisplay: URL?
+
+    var isSafeEnabled: Bool = true {
+        didSet {
+            let named = isSafeEnabled ? "safe-on" : "safe-off"
+            safeButton.image = UIImage(named: named)
+            safeButton.tintColor = isSafeEnabled ? .red : .black
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +66,9 @@ class TopEntriesViewController: UITableViewController {
     }
 
     private func configureViews() {
-        func configureActivityIndicatorView() {
+        func configureNavBar() {
             self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: self.activityIndicatorView)
+            isSafeEnabled = UserDefaults().bool(forKey: "SAFE_ENABLED")
         }
 
         func configureTableView() {
@@ -87,7 +99,7 @@ class TopEntriesViewController: UITableViewController {
             self.toolbarItems = [errorItem, flexSpaceItem, retryItem, fixedSpaceItem, closeItem]
         }
 
-        configureActivityIndicatorView()
+        configureNavBar()
         configureTableView()
         configureToolbar()
     }
@@ -107,6 +119,10 @@ class TopEntriesViewController: UITableViewController {
             self.errorLabel.text = self.viewModel.errorMessage
             self.navigationController?.setToolbarHidden(false, animated: true)
         }
+    }
+
+    @IBAction func safeAction(_ sender: UIBarButtonItem) {
+        safeToggle()
     }
 }
 
@@ -129,7 +145,7 @@ extension TopEntriesViewController { // UITableViewDataSource
 
         let entryTableViewCell: EntryTableViewCell = tableView.cellForRow(at: indexPath) as! EntryTableViewCell
 
-        if entry.over18 {
+        if entry.over18 && isSafeEnabled {
             entryTableViewCell.doShake()
             return
         }
@@ -149,5 +165,10 @@ extension TopEntriesViewController {
         }
         vc.url = self.urlToDisplay
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func safeToggle()  {
+        isSafeEnabled.toggle()
+        UserDefaults().set(isSafeEnabled, forKey: "SAFE_ENABLED")
     }
 }

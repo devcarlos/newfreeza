@@ -9,6 +9,8 @@ class FavoritesViewController: UITableViewController {
     let tableFooterView = UIView()
     var urlToDisplay: URL?
 
+    var isSafeEnabled: Bool = UserDefaults().bool(forKey: "SAFE_ENABLED")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -112,7 +114,7 @@ extension FavoritesViewController { // UITableViewDataSource
 
         let entryTableViewCell: EntryTableViewCell = tableView.cellForRow(at: indexPath) as! EntryTableViewCell
 
-        if entry.over18 {
+        if entry.over18 && isSafeEnabled {
             entryTableViewCell.doShake()
             return
         }

@@ -24,6 +24,11 @@ class EntryTableViewCell: UITableViewCell {
         }
     }
 
+    var isSafeEnabled: Bool = true
+
+    var blurView: UIView?
+    var nsfwView: UIImageView?
+
     @IBOutlet private var thumbnailButton: UIButton!
     @IBOutlet private var authorLabel: UILabel!
     @IBOutlet private var commentsCountLabel: UILabel!
@@ -68,13 +73,15 @@ class EntryTableViewCell: UITableViewCell {
 
         isFavorite = checkFavorite()
 
-        if entry.over18 {
+        isSafeEnabled = UserDefaults().bool(forKey: "SAFE_ENABLED")
+        if entry.over18 && isSafeEnabled {
             if #available(iOS 10.0, *) {
                 let blur = UIBlurEffect(style: .regular)
                 let blurView = UIVisualEffectView(effect: blur)
                 blurView.frame = self.thumbnailButton.bounds
                 blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                 self.thumbnailButton.addSubview(blurView)
+                self.blurView = blurView
             } else {
                 let blurView = UIView()
                 blurView.backgroundColor = .black
@@ -90,7 +97,13 @@ class EntryTableViewCell: UITableViewCell {
             nsfwBadge.frame = CGRect(x: self.thumbnailButton.frame.size.width/2 - side/2, y: self.thumbnailButton.frame.size.height/2 - side/2, width: side, height: side)
             nsfwBadge.contentMode = .scaleAspectFill
             self.thumbnailButton.addSubview(nsfwBadge)
+            self.nsfwView = nsfwBadge
         }
+    }
+
+    override func prepareForReuse() {
+        self.blurView?.removeFromSuperview()
+        self.nsfwView?.removeFromSuperview()
     }
 }
 
@@ -100,7 +113,7 @@ extension EntryTableViewCell  {
             return
         }
         
-        if entry.over18 {
+        if entry.over18 && isSafeEnabled {
             if #available(iOS 10.0, *) {
                 self.contentView.shakev1()
             } else {

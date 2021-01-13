@@ -109,7 +109,16 @@
                             <outlet property="delegate" destination="2Fm-PT-q0X" id="gUy-dD-Evp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Top" id="ues-u9-1rD"/>
+                    <navigationItem key="navigationItem" title="Top" id="ues-u9-1rD">
+                        <barButtonItem key="leftBarButtonItem" image="safe-on" id="Qh0-5b-dGM">
+                            <connections>
+                                <action selector="safeAction:" destination="2Fm-PT-q0X" id="k0i-zv-uAb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="safeButton" destination="Qh0-5b-dGM" id="ubA-ZS-Vfd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-4T-dLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -453,6 +462,7 @@
         <image name="bell" width="30" height="30"/>
         <image name="heart" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
+        <image name="safe-on" width="32" height="32"/>
         <image name="thumbnail-placeholder" width="90" height="90"/>
     </resources>
 </document>
